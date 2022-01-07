@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-springboot
+spec:
+  ports:
+    - name: http-8080
+      port: 8080
+      protocol: 
+      targetPort: 8080
+    - name: http-8443
+      port: 8443
+      protocol: 
+      targetPort: 8443
+    - name: http-8778
+      port: 8778
+      protocol: 
+      targetPort: 8778

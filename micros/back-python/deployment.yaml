@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back-python
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/jump-app-cicd/back-python:develop
+        imagePullPolicy: Always
+        name: back-python
+        ports:
+          - containerPort: 8080
+            protocol: TCP
+        resources: {}
+        env:  
+          - name: APP_REF_NAME
+            value: jump-app

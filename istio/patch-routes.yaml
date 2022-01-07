@@ -1,0 +1,9 @@
+- op: replace
+  path: /metadata/namespace
+  value: istio-system
+- op: replace
+  path: /spec/to/name
+  value: istio-ingressgateway
+- op: replace
+  path: /spec/port/targetPort
+  value: http2

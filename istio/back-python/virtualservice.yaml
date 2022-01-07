@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: back-python
+spec:
+  gateways:
+  - back-python
+  - mesh
+  hosts:
+  - back-python
+  http:
+  - route:
+      - destination:
+          host: back-python
+        weight: 100

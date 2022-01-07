@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-javascript
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/jump-app-cicd/front-javascript:develop
+        imagePullPolicy: Always
+        name: front-javascript
+        ports:
+          - containerPort: 3000
+            protocol: TCP
+        resources: {}
+        env:  
+          - name: APP_REF_NAME
+            value: jump-app
+        envFrom:
+          - configMapRef:
+              name: react-envs

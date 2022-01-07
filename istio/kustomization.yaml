@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../micros
+  - base
+  - back-python
+  - back-golang
+  - back-springboot
+  - front-javascript
+patches:
+  - path: patch-annotations.yaml
+    target:
+      group: apps
+      version: v1
+      kind: Deployment
+  - path: patch-routes.yaml
+    target:
+      group: route.openshift.io
+      version: v1
+      kind: Route

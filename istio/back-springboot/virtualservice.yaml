@@ -4,7 +4,6 @@ metadata:
   name: back-springboot
 spec:
   gateways:
-  - back-springboot
   - mesh
   hosts:
   - back-springboot

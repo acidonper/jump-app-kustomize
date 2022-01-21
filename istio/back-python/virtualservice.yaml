@@ -4,7 +4,6 @@ metadata:
   name: back-python
 spec:
   gateways:
-  - back-python
   - mesh
   hosts:
   - back-python

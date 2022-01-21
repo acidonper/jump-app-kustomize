@@ -6,5 +6,5 @@ spec:
   ports:
     - name: http-8442
       port: 8442
-      protocol: 
+      protocol: TCP
       targetPort: 8442   

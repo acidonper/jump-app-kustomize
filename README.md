@@ -40,6 +40,10 @@ cd istio
 kustomize build .
 ```
 
+## Deployment Examples
+
+It is possible to find "real" deployments scenarios in the following [GitHub repository](https://github.com/acidonper/jump-app-gitops/tree/kustomize)
+
 ## Author
 
 Asier Cidon @Red Hat
